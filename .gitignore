@@ -6,4 +6,4 @@
 *.gcda
 *.gcno
 *.gcov
-*~
+*.*~
