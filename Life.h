@@ -211,17 +211,34 @@ class Life{
 
 	public:
 	Life(){
-
+		vector<T> temp;
+		grid.push_back(temp);
+		vector<bool> temp2;
+		marker.push_back(temp2);
+		width_=0;
+		height_=0;
+		pop=0;
+		gen=0;
 	}
 	Life(int width, int height){
+		width_ = width;
+		height_ = height;
+		pop=0;
+		gen=0;
 
+		vector<T> temp(width_+2,T());
+		vector<bool> mark(width_+2,false);
+		for(int i=0;i<height_+2;i++){		
+			grid.push_back(temp);
+			marker.push_back(mark);
+		}
 	}
 
 	/*
 	We initilize the grid with the given coordinates with the given value
 	*/
 	void init(int i, int j, string x){
-
+		grid[i][j].setState(x);
 	}
 
 	/*
@@ -229,7 +246,7 @@ class Life{
 	*/
 
 	string getSta(int i, int j){
-
+		return grid[i][j].getStat();
 	}
 
 	/*
