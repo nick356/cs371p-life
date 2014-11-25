@@ -148,41 +148,51 @@ class Handle{
 		pointer _p;
 	protected:
 		pointer get(){
-
+			return _p;
 		}
 
 		const_pointer get() const{
-
+			return _p;
 		}
 
 		void mutate(){
-
+			AbstractCell* p=new ConwayCell("*");
+			delete _p;
+			_p=p;
+			//delete p;
 		}
 	public:
 
 		Handle (pointer p){
-
+			_p=p;
 		}
 
 		Handle(){
-
+			AbstractCell* p=new FredkinCell();
+			_p=p;
 		}
 
 		Handle (const Handle& that){
 			if(!that._p){
+				_p=0;
+			}else{
+				_p = that._p->clone();
 
+			}
 		}
 
 		~Handle(){
-		
+			delete _p;
 		}
 
 		Handle& operator = (Handle that){
-
+			swap(that);
+			return *this;
 		}
 
 		void swap(Handle& that){
-
+			std::swap(_p,that._p);
+			delete that._p;
 		}
 
 		
