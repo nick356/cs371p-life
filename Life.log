@@ -1,0 +1,137 @@
+commit e33a18e92aad9f55b33954139932e03c3904e2f8
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 16:55:53 2014 -0600
+
+    Removed Doxyfile~
+
+commit 7e297e55b02d4d1253ffe588f3cf719122082bd7
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 16:54:57 2014 -0600
+
+    Removed TestLife and RunLife
+
+commit 05e22d6433e817b8f8d21bea6087ecb6360df7e4
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 16:54:14 2014 -0600
+
+    Added Doxyfiles
+
+commit c2e0565879139d839e8a269c0d82fa9c1287e21e
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 16:48:34 2014 -0600
+
+    Added several more unit tests to account for destructors and the PDF
+
+commit f72a1b511b5a01710c4fdfb8022f082f753cdae5
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 15:49:34 2014 -0600
+
+    Removed RunLife and TestLife
+
+commit 0774b17849f3772530a525ac2f2e7fab800c30c3
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 15:49:01 2014 -0600
+
+    Most of the stuff is finished just have to added a few more unit tests.
+
+commit 0709183ea5ac87d8c558a7a2c75c74a639d2e6fb
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 14:01:31 2014 -0600
+
+    Removed TestLife
+
+commit 858fdcfcafc0d2e53188cab4155840a1d919d554
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 14:01:17 2014 -0600
+
+    The test cases now run and work
+
+commit a9ced42a319157c580070cb0541847bcb20f7a0a
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Tue Nov 25 13:53:03 2014 -0600
+
+    Added method stuff for Life
+
+commit 58c15871065cf392e59c73c01e8124cfd9c94eb4
+Author: Nicholas Carter <nicholascarter@wireless-10-147-175-112.public.utexas.edu>
+Date:   Tue Nov 25 13:47:49 2014 -0600
+
+    Added most of the methods for the FredkinCell, ConwayCell, Handle, Cell, and Abstract Cell
+
+commit e7fd8aa26f97dfba8847db64c58ed89335999e27
+Author: Nicholas Carter <nicholascarter@Nicholass-MacBook.local>
+Date:   Tue Nov 25 12:39:38 2014 -0600
+
+    Added a bunch of test cases
+
+commit bd83d6528ba3b04855831cd0914ff71270397297
+Author: Nicholas Carter <nicholascarter@Nicholass-MacBook.local>
+Date:   Tue Nov 25 01:55:31 2014 -0600
+
+    The constructors for Life are up
+
+commit d412112bae8d8a3b0e1f38d7b81a7ff4c18b3574
+Author: Nicholas Carter <nicholascarter@Nicholass-MacBook.local>
+Date:   Tue Nov 25 01:53:14 2014 -0600
+
+    I think I have the Handle stuff.
+
+commit b253e2bd88007d7078f9d169b8567e9094b92de3
+Author: Nicholas Carter <nicholascarter@Nicholass-MacBook.local>
+Date:   Tue Nov 25 01:39:13 2014 -0600
+
+    I think I have Fredkin Cell
+
+commit feb7afb0f90d5fb3e85645f7843840996b5c0145
+Author: Nicholas Carter <nicholascarter@Nicholass-MacBook.local>
+Date:   Tue Nov 25 01:19:14 2014 -0600
+
+    I think I have the base for ConwayCell
+
+commit 7afa5d0af77f1b2e4750d7479633c7070b4ee740
+Author: Nicholas Carter <nicholascarter@Nicholass-MacBook.local>
+Date:   Tue Nov 25 01:04:32 2014 -0600
+
+    Added the overall abstraction behind the various cells, also implemented parts of Life and Handle.
+
+commit 1687d47cbe69bddd17d32f1d975e1c45fe18c504
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Mon Nov 24 23:03:33 2014 -0600
+
+    Added RunLife.in and the comments for RunLife.c++
+
+commit f94aa3d03c9caf4d4da90bedb13b2edd247aebd3
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Mon Nov 24 23:00:29 2014 -0600
+
+    removed makefile~
+
+commit cf9e0111ba1886bac5dafaba358131ac73f9b109
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Mon Nov 24 22:59:09 2014 -0600
+
+    Made the makefile
+
+commit 38d3edc2a6728632f05962927419ffde10bd149e
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Mon Nov 24 22:57:45 2014 -0600
+
+    Altered git ignore so that it hopefully works
+
+commit 35eb6f55b5b89a766223cadb16f0d0b7765fe87c
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Mon Nov 24 22:56:01 2014 -0600
+
+    Added gitignore
+
+commit 07db08c1f0ab2f6ac152830abbb2cf82aa6b4c5b
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Mon Nov 24 22:53:14 2014 -0600
+
+    Base files
+
+commit 4d52dc11b2955bff1bdd39d8d753cb5b4bab6e12
+Author: Nicholas Carter <nicholascarter100@gmail.com>
+Date:   Mon Nov 24 22:52:32 2014 -0600
+
+    Base files
