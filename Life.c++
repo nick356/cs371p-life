@@ -1,6 +1,7 @@
 #include <iostream> // istream, ostream
 #include <vector>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include "Life.h"
 

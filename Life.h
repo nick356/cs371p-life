@@ -2,6 +2,8 @@
 #define Life_h
 #include <iostream> // istream, ostream
 #include <vector>
+#include <fstream>
+#include <string>
 
 
 using namespace std;
@@ -32,6 +34,8 @@ class AbstractCell{
 		virtual AbstractCell* clone() = 0;
 
 };
+
+
 
 class ConwayCell : public AbstractCell{
 
@@ -109,24 +113,6 @@ class FredkinCell : public AbstractCell{
 	FredkinCell* clone();
 };
 
-class Cell: Handle<AbstractCell>{
-	public:
-	Cell (AbstractCell* p) : Handle<AbstractCell>(p)
-		{}
-
-	Cell ():Handle<AbstractCell>(){
-	}
-
-	void setState(string);
-	bool switchStat(int);
-	bool printsta();
-	vector<int> retrules();
-	string getStat();
-	string getName();
-
-
-};
-
 template <typename T>
 class Handle{
 	friend bool operator == (const Handle& lhs, const Handle& rhs){
@@ -196,6 +182,24 @@ class Handle{
 		}
 
 		
+};
+
+class Cell : Handle<AbstractCell>{
+	public:
+	Cell (AbstractCell* p) : Handle<AbstractCell>(p)
+		{}
+
+	Cell ():Handle<AbstractCell>(){
+	}
+
+	void setState(string);
+	bool switchStat(int);
+	bool printsta();
+	vector<int> retrules();
+	string getStat();
+	string getName();
+
+
 };
 
 template <typename T>
