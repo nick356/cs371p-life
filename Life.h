@@ -255,6 +255,15 @@ class Life{
 	method which proceeds to update the grid.
 	*/
 	void incrementOneGeneration(){
+		if(gen==0)
+			population();
+		gen++;
+		for(int i=1;i<=height_;i++){
+			for(int j=1;j<=width_;j++)
+				checkSurrounding(i,j);
+			
+		}
+		update();
 
 	}
 
@@ -264,7 +273,47 @@ class Life{
 	else statements we allow for additional Cell types to be added as long as they check the adjacent indexes.
 	*/
 	void checkSurrounding(int row, int col){
+		int count=0;	
+		vector<int> key=grid[row][col].retrules();
+		int i=0;
+		while(i<key.size()){
+			if(key[i]==1){
+				if(0==grid[row-1][col-1].getStat().compare("alive"))
+					count++;
+			}else if(key[i]==2){
+				if(0==grid[row-1][col].getStat().compare("alive")){	
+					count++;
+				}
+			}else if(key[i]==3){
+				if(0==grid[row-1][col+1].getStat().compare("alive"))
+					count++;
+			}else if(key[i]==4){
+				if(0==grid[row][col-1].getStat().compare("alive")){	
+					count++;
+			}
+			}else if(key[i]==5){
+				if(0==grid[row][col].getStat().compare("alive"))
+					count++;
+			}else if(key[i]==6){
+				if(0==grid[row][col+1].getStat().compare("alive")){		
+					count++;}
+			}else if(key[i]==7){
+				if(0==grid[row+1][col-1].getStat().compare("alive"))
+					count++;
+			}else if(key[i]==8){
+				if(0==grid[row+1][col].getStat().compare("alive")){	
+					count++;}
+			}else if(key[i]==9){
+				if(0==grid[row+1][col+1].getStat().compare("alive"))
+					count++;
+			}
+			i++;
+		}
 
+		marker[row][col]=(grid[row][col].switchStat(count));
+
+
+		
 	}
 
 	/*
@@ -275,6 +324,21 @@ class Life{
 	the "alive" string then the age is incremented.
 	*/
 	void update(){
+		for(int i=1;i<=height_;i++)
+			for(int j=1;j<=width_;j++){
+				if (marker[i][j]){
+					if (grid[i][j].getStat() == "alive"){
+						grid[i][j].setState("dead");
+						pop--;
+					}
+					else{					
+						grid[i][j].setState("alive");
+						pop++;
+					}
+				}else
+					if(grid[i][j].getStat() == "alive")
+						grid[i][j].setState("alive");
+			}
 
 	}
 
@@ -283,6 +347,12 @@ class Life{
 	resides in it, which does the actual printing.
 	*/
 	void printgrd(){
+		for(int i=1;i<=height_;i++){
+			for(int j=1;j<=width_;j++)
+				grid[i][j].printsta();
+			cout<<endl;
+		}
+
 
 	}
 
@@ -292,14 +362,21 @@ class Life{
 	and vise versus
 	*/
 	int population(){
-
+		if(gen==0){
+			pop=0;
+			for(int i = 1; i <=height_; i++)
+				for(int j= 1; j<=width_;j++)
+					if(grid[i][j].getStat() == "alive")
+						pop++;
+		}
+		return pop;
 	}
 	/*
 	This function is also constant time because the generation bookkeeping is done 
 	when we increment a generation
 	*/
 	int generation(){
-
+		return gen;
 	}
 	
 };
