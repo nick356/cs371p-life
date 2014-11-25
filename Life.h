@@ -22,6 +22,8 @@ class AbstractCell{
 			name=chr;
 			state=stat;
 		}
+
+		virtual ~AbstractCell(){}
 	
 		virtual bool switchStat(int)=0;
 
@@ -65,6 +67,10 @@ class ConwayCell : public AbstractCell{
 			}
 		}
 
+		~ConwayCell(){
+
+		}
+
 		bool printsta();
 		bool switchStat(int);
 		//Sets the state of the cell
@@ -104,6 +110,9 @@ class FredkinCell : public AbstractCell{
 			}
 			for(int i=2;i<10;i+=2)
 				rules.push_back(i);
+		}
+
+		~FredkinCell(){
 		}
 
 
@@ -262,8 +271,8 @@ class Life{
 		if(gen==0)
 			population();
 		gen++;
-		for(int i=1;i<=height_;i++){
-			for(int j=1;j<=width_;j++)
+		for(signed int i=1;i<=height_;i++){
+			for(signed int j=1;j<=width_;j++)
 				checkSurrounding(i,j);
 			
 		}
@@ -279,7 +288,7 @@ class Life{
 	void checkSurrounding(int row, int col){
 		int count=0;	
 		vector<int> key=grid[row][col].retrules();
-		int i=0;
+		unsigned int i=0;
 		while(i<key.size()){
 			if(key[i]==1){
 				if(0==grid[row-1][col-1].getStat().compare("alive"))
@@ -371,7 +380,7 @@ class Life{
 			for(int i = 1; i <=height_; i++)
 				for(int j= 1; j<=width_;j++)
 					if(grid[i][j].getStat() == "alive")
-						pop++;
+						++pop;
 		}
 		return pop;
 	}
