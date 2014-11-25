@@ -39,11 +39,26 @@ class ConwayCell : public AbstractCell{
 	public:
 
 		ConwayCell(){
-
+			name=".";
+			state="dead";
+			for(int i=1;i<10;i++){
+				if(i!=5)
+				  rules.push_back(i);
+			}
 		}
 
 		ConwayCell(string chr){
-
+			if(chr=="*"){
+				name=chr;
+				state="alive";
+			}else{
+				name=".";
+				state="dead";
+			}
+			for(int i=1;i<10;i++){
+				if(i!=5)
+				  rules.push_back(i);
+			}
 		}
 
 		bool printsta();
