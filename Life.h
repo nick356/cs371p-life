@@ -74,11 +74,32 @@ class FredkinCell : public AbstractCell{
 		int age;
 	public:
 		FredkinCell(){
-
+			name="-";
+			state="dead";
+			for(int i=2;i<10;i+=2)
+				rules.push_back(i);
+			age=0;
 		}
 
 		FredkinCell(string chr){
-
+			age=0;
+			if(chr=="-"){
+				name=chr;
+				state="dead";
+			}else if(chr=="+"){
+				name=chr;
+				state="alive";
+				age=10;
+			}else if(atoi(chr.c_str())>=0){
+				name=chr;
+				state="alive";
+				age=atoi(chr.c_str());
+			}else{
+				name=chr;
+				state="dead";
+			}
+			for(int i=2;i<10;i+=2)
+				rules.push_back(i);
 		}
 
 
